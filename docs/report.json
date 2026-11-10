@@ -1,0 +1,310 @@
+{
+ "kind": "report",
+ "source": "demo plan (synthetic, 120 subnets, seed 1, with injected faults)",
+ "plan": "generated-120-1",
+ "supernet": "10.0.0.0/19",
+ "addresses": 8192,
+ "subnets": 122,
+ "used": 4004,
+ "used_share": 0.48876953125,
+ "free": 4188,
+ "free_blocks": 5,
+ "largest_free": "10.0.16.0/20",
+ "largest_free_addresses": 4096,
+ "fragmentation": 0.021967526265520565,
+ "hosts_planned": 1845,
+ "hosts_capacity": 3766,
+ "fill": 0.48990971853425386,
+ "by_prefix": {
+  "24": 6,
+  "25": 5,
+  "26": 14,
+  "27": 19,
+  "28": 29,
+  "29": 20,
+  "30": 29
+ },
+ "unused": [
+  {
+   "name": "net-00004",
+   "cidr": "10.0.4.0/24",
+   "unused": 201
+  },
+  {
+   "name": "net-00003",
+   "cidr": "10.0.3.0/24",
+   "unused": 188
+  },
+  {
+   "name": "net-00000",
+   "cidr": "10.0.0.0/24",
+   "unused": 155
+  },
+  {
+   "name": "net-00005",
+   "cidr": "10.0.5.0/25",
+   "unused": 100
+  },
+  {
+   "name": "net-00008",
+   "cidr": "10.0.6.128/25",
+   "unused": 91
+  }
+ ],
+ "findings": {
+  "total": 11,
+  "by_rule": {
+   "outside_supernet": 1,
+   "overlap": 2,
+   "duplicate_name": 1,
+   "duplicate_vlan": 1,
+   "gateway_outside": 2,
+   "gateway_reserved": 1,
+   "over_capacity": 2,
+   "host_bits": 1
+  },
+  "listed": [
+   {
+    "rule": "outside_supernet",
+    "subject": "net-00045",
+    "detail": "172.16.0.0/24 is not inside 10.0.0.0/19"
+   },
+   {
+    "rule": "overlap",
+    "subject": "net-00002|overlap-000",
+    "detail": "net-00002 (10.0.2.0/24) and overlap-000 (10.0.2.0/25) share addresses"
+   },
+   {
+    "rule": "overlap",
+    "subject": "net-00016|overlap-001",
+    "detail": "net-00016 (10.0.8.192/26) and overlap-001 (10.0.8.192/27) share addresses"
+   },
+   {
+    "rule": "duplicate_name",
+    "subject": "net-00050",
+    "detail": "2 subnets are called net-00050"
+   },
+   {
+    "rule": "duplicate_vlan",
+    "subject": "3999",
+    "detail": "VLAN 3999 is used by net-00049, net-00001"
+   },
+   {
+    "rule": "gateway_outside",
+    "subject": "net-00059",
+    "detail": "gateway 203.0.113.1 of 10.0.13.224/28: the gateway is not an address of its subnet"
+   },
+   {
+    "rule": "gateway_outside",
+    "subject": "net-00040",
+    "detail": "gateway 203.0.113.1 of 10.0.12.160/27: the gateway is not an address of its subnet"
+   },
+   {
+    "rule": "gateway_reserved",
+    "subject": "net-00115",
+    "detail": "gateway 10.0.15.160 of 10.0.15.160/30: the gateway is the network or the broadcast address"
+   },
+   {
+    "rule": "over_capacity",
+    "subject": "net-00031",
+    "detail": "31 hosts planned in 10.0.11.128/27, which holds 30"
+   },
+   {
+    "rule": "over_capacity",
+    "subject": "net-00041",
+    "detail": "15 hosts planned in 10.0.12.192/28, which holds 14"
+   },
+   {
+    "rule": "host_bits",
+    "subject": "net-00102",
+    "detail": "10.0.15.109/30 is not the network address of 10.0.15.108/30"
+   }
+  ]
+ },
+ "map": [
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.75,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.8125,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "accuracy": {
+  "injected": 11,
+  "found": 11,
+  "missed": [],
+  "extra": [],
+  "rules": {
+   "outside_supernet": {
+    "injected": 1,
+    "found": 1,
+    "missed": 0,
+    "extra": 0
+   },
+   "overlap": {
+    "injected": 2,
+    "found": 2,
+    "missed": 0,
+    "extra": 0
+   },
+   "duplicate_name": {
+    "injected": 1,
+    "found": 1,
+    "missed": 0,
+    "extra": 0
+   },
+   "duplicate_vlan": {
+    "injected": 1,
+    "found": 1,
+    "missed": 0,
+    "extra": 0
+   },
+   "gateway_outside": {
+    "injected": 2,
+    "found": 2,
+    "missed": 0,
+    "extra": 0
+   },
+   "gateway_reserved": {
+    "injected": 1,
+    "found": 1,
+    "missed": 0,
+    "extra": 0
+   },
+   "over_capacity": {
+    "injected": 2,
+    "found": 2,
+    "missed": 0,
+    "extra": 0
+   },
+   "host_bits": {
+    "injected": 1,
+    "found": 1,
+    "missed": 0,
+    "extra": 0
+   }
+  }
+ }
+}

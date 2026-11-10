@@ -1,0 +1,130 @@
+{
+ "kind": "bench",
+ "environment": {
+  "ipamplan": "1.0.0",
+  "python": "3.14.10",
+  "system": "Linux x86_64",
+  "cpus": 12,
+  "seed": 1,
+  "repeat": 5,
+  "literal_repeat": 3,
+  "command": "bench --sizes 1000,10000,100000 --ref-max 10000 --alloc-sizes 100,400,2000,10000 --alloc-ref-max 200 --repeat 5 --draws 50 --seeds 50 --out /out",
+  "seconds": 36.4
+ },
+ "checks": [
+  {
+   "subnets": 1000,
+   "fast": 0.016184268999495544,
+   "literal": 0.07145222899998771,
+   "findings": 0
+  },
+  {
+   "subnets": 10000,
+   "fast": 0.2023659980040975,
+   "literal": 6.401336401002482,
+   "findings": 0
+  },
+  {
+   "subnets": 100000,
+   "fast": 2.325950403996103,
+   "literal": null,
+   "findings": 0
+  }
+ ],
+ "alloc": [
+  {
+   "requests": 100,
+   "fast": 0.00023704800696577877,
+   "literal": 0.07728408300317824,
+   "placed": 100
+  },
+  {
+   "requests": 400,
+   "fast": 0.001090107994969003,
+   "literal": null,
+   "placed": 400
+  },
+  {
+   "requests": 2000,
+   "fast": 0.005620345000352245,
+   "literal": null,
+   "placed": 2000
+  },
+  {
+   "requests": 10000,
+   "fast": 0.03144131600129185,
+   "literal": null,
+   "placed": 10000
+  }
+ ],
+ "accuracy": {
+  "seeds": 50,
+  "subnets": 200,
+  "summary": {
+   "injected": 375,
+   "found": 375,
+   "missed": 0,
+   "extra": 0,
+   "clean_plans": 50,
+   "clean_findings": 0,
+   "rules": {
+    "outside_supernet": {
+     "injected": 45,
+     "found": 45,
+     "missed": 0,
+     "extra": 0
+    },
+    "overlap": {
+     "injected": 53,
+     "found": 53,
+     "missed": 0,
+     "extra": 0
+    },
+    "duplicate_name": {
+     "injected": 49,
+     "found": 49,
+     "missed": 0,
+     "extra": 0
+    },
+    "duplicate_vlan": {
+     "injected": 50,
+     "found": 50,
+     "missed": 0,
+     "extra": 0
+    },
+    "gateway_outside": {
+     "injected": 43,
+     "found": 43,
+     "missed": 0,
+     "extra": 0
+    },
+    "gateway_reserved": {
+     "injected": 45,
+     "found": 45,
+     "missed": 0,
+     "extra": 0
+    },
+    "over_capacity": {
+     "injected": 44,
+     "found": 44,
+     "missed": 0,
+     "extra": 0
+    },
+    "host_bits": {
+     "injected": 46,
+     "found": 46,
+     "missed": 0,
+     "extra": 0
+    }
+   }
+  }
+ },
+ "verification": {
+  "checks": 102,
+  "numbers": 8296,
+  "plans": 50,
+  "allocations": 50,
+  "ok": true,
+  "bad": 0
+ }
+}
